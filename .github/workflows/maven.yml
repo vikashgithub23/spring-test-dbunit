@@ -23,5 +23,5 @@ jobs:
         distribution: 'adopt'
         cache: maven
     - name: Build with Maven
-      working-directory: "spring-test-dbunit-sample"
+      working-directory: "spring-test-dbunit"
       run: mvn -B package --file pom.xml
