@@ -5,7 +5,9 @@ name: Java CI with Maven
 
 on:
   push:
-    branches: [ master ]
+    branches: 
+      - master
+      - feature1.0
   pull_request:
     branches: [ master ]
 
@@ -22,6 +24,7 @@ jobs:
         java-version: '11'
         distribution: 'adopt'
         cache: maven
+      
     - name: Build with Maven
       working-directory: "spring-test-dbunit"
       run: mvn -B package --file pom.xml
